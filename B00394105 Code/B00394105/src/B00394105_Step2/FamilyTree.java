@@ -90,7 +90,7 @@ public class FamilyTree {
                     }
                 } else {
                     FamilyTreeNode next = this.current.child;
-                    while(next.sibling != null){
+                    if(next.sibling != null){
                         if(member.familyIdentifier.equalsIgnoreCase(next.sibling.name)){
                             if(next.sibling.partner == null){
                                 next.sibling.partner = member;
